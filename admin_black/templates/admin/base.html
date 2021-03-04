@@ -11,7 +11,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{% static "admin_black/assets/img/apple-icon.png" %}">
-    <link rel="icon" type="image/png" href="{% static "admin_black/assets/img/favicon.png" %}">
+    {% comment %} <link rel="icon" type="image/png" href="{% static "admin_black/assets/img/favicon.png" %}"> {% endcomment %}
+    <link rel="shortcut icon" href="{% static 'images/favicon_harpia.ico' %}" type="image/x-icon">
 
     <title>{% block title %}{% endblock %}</title>
 
@@ -30,6 +31,7 @@
     <link href="{% static "admin_black/assets/css/black-dashboard.css" %}" rel="stylesheet"/>
     <link href="{% static "admin_black/assets/demo/demo.css" %}" rel="stylesheet"/>
     <link href="{% static "admin_black/assets/css/styles.css" %}" rel="stylesheet"/>
+    <link href="{% static 'admin_black/assets/css/admin-colors.css' %}" rel="stylesheet"/>
 
     {% block extrastyle %}{% endblock %}
     {% block extrahead %}{% endblock %}
@@ -75,7 +77,7 @@
 
         <!-- Footer -->
         {% block footer %}
-            {# {% include "admin/footer.html" %} #}
+            {% comment %} {% include "admin/footer.html" %} {% endcomment %}
         {% endblock %}
         <!-- End Footer -->
     </div>
