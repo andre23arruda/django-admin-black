@@ -56,6 +56,6 @@ input[type="submit"].default{
     transition: none;
 }
 
-.sidebar .nav li>a, .off-canvas-sidebar .nav li>a {
-    font-size: 1rem;
+.card .card-header h5.title {
+    text-align: center !important;
 }
