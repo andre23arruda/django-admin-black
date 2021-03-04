@@ -1,17 +1,18 @@
 {% extends "admin/base_site.html" %}
 {% load i18n static %}
 {% load admin_black %}
+{% get_admin_black_setting as admin_black_setting %}
 
 {% block content %}
-    <div class="row m-5" style="
-        min-height: 80vh;
+    <div class="row white-content" style="
+        min-height: 100vh;
         display: flex;
         align-items: center;"
     >
-        <div class="col-12">
+        <div class="col-8 offset-2">
             <div class="card">
                 <div class="card-header {{ direction.panel }}">
-                    <h5 class="title">{% trans 'Log in' %}</h5>
+                    <h5 class="title">{% trans 'Log in' %} {% trans 'Administration Panel' %}</h5>
                 </div>
                 <div class="card-body">
                     <form action="{{ app_path }}" method="post" id="login-form">
@@ -62,6 +63,7 @@
             </div>
         </div>
     </div>
+
 {% endblock %}
 
 {% block extrascript %}
@@ -92,5 +94,16 @@
                 notification.warning("<p class='{{ direction.panel }}'>" + "{{ error|clean_text }}" + "</p>", 'top', '{{ direction.notify }}');
             {% endfor %}
         {% endif %}
+    </script>
+
+    <script type="application/javascript">
+        $('select').addClass('form-control');
+        $('select').attr('style', 'background-color:{{ admin_black_setting.input_bg_color }};');
+        $('input[type="text"]').addClass('form-control');
+        $('input[type="number"]').addClass('form-control');
+        $('input[type="password"]').addClass('form-control');
+        $('input[type="email"]').addClass('form-control');
+        $('textarea').addClass('form-control');
+        ChangeSidBarBackground('{{ admin_black_setting.sidebar_background }}');
     </script>
 {% endblock %}
