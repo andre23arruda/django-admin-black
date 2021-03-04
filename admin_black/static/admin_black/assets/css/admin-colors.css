@@ -102,7 +102,11 @@ input[type="button"].add-array-item
     border: none;
     position: relative;
     overflow: hidden;
-    margin: 4px 1px;
+    margin-bottom: 40px;
+}
+
+.django-ckeditor-widget {
+    width: 100%;
 }
 
 .btn,
@@ -145,6 +149,11 @@ input[type="button"].add-array-item
     margin-bottom: 15px;
 }
 
+.related-widget-wrapper,
+.related-widget-wrapper ul,
+.vTextField, .vUUIDField {
+    width: 100% !important;
+}
 
 @media screen and (max-width: 991px) {
     .breadcrumbs_panel .lbc {
