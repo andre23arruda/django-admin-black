@@ -59,3 +59,28 @@ input[type="submit"].default{
 .card .card-header h5.title {
     text-align: center !important;
 }
+
+.breadcrumbs_panel .lbc {
+    margin: 80px 32px -50px 30%;
+    text-align: left;
+}
+
+.card-tasks {
+    height: 100%
+}
+
+.card-tasks .table-full-width {
+    max-height: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .breadcrumbs_panel .lbc {
+        margin: 75px 50px 0px 50px;
+        text-align: left;
+    }
+    .main-panel .content {
+        padding-left: 30px;
+        padding: 30px;
+    }
+}
