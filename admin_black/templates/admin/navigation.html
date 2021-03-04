@@ -30,17 +30,23 @@
                         {% block nav-global %}{% endblock %}
                         <li class="dropdown nav-item">
                             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                <div class="photo">
-                                    <img src="{% static "admin_black/assets/img/anime3.png" %}" alt="Profile Photo">
+                                <div class="text-center">
+                                    <i class="tim-icons icon-single-02"></i>
+                                    <p>{% trans 'Welcome' %},
+                                        <b>
+                                            {% if  user.get_full_name %}
+                                                {{ user.get_full_name }}
+                                            {% else %}
+                                                {{  user.username }}
+                                            {% endif %}
+                                        </b>
+                                    </p>
                                 </div>
                                 <b class="caret d-none d-lg-block d-xl-block"></b>
                                 <p class="d-lg-none">{% trans 'Log out' %}</p>
                             </a>
                             <ul class="dropdown-menu dropdown-navbar {{ direction.panel }}">
                                 {% block userlinks %}
-                                    <li class="nav-link">
-                                        <b class="nav-item dropdown-item">{{ user.get_full_name }}</b>
-                                    </li>
 
                                     {% if site_url %}
                                         <li class="nav-link">
