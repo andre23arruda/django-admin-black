@@ -32,9 +32,9 @@ Modern template for **Django admin interface** coded on top of Black Dashboard (
 ## Installation
 
 ```bash
-$ pip install git+https://github.com/app-generator/django-admin-black.git
+$ pip install git+https://github.com/andre23arruda/django-admin-black.git
 $ # or
-$ easy_install git+https://github.com/app-generator/django-admin-black.git
+$ easy_install git+https://github.com/andre23arruda/django-admin-black.git
 ```
 
 * Add 'admin_black' application to the INSTALLED_APPS setting of your Django project settings.py file (note it should be before 'django.contrib.admin'):
