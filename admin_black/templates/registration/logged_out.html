@@ -1,20 +1,24 @@
 {% extends "admin/base_site.html" %}
 {% load i18n %}
+{% load admin_black %}
+{% get_admin_black_setting as admin_black_setting %}
 
 {% block content %}
-    <div class="content">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header {{ direction.panel }}">
-                        <h5 class="title">{% trans 'Log in' %}</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-7 pr-md-5">
-                                <div class="card-footer">
-                                    <a href="{% url 'admin:index' %}" class="btn btn-fill btn-primary">{% trans 'Log in again' %}</a>
-                                </div>
+    <div class="row white-content" style="
+        min-height: 100vh;
+        display: flex;
+        align-items: center;"
+    >
+        <div class="col-8 offset-2">
+            <div class="card">
+                <div class="card-header {{ direction.panel }}">
+                    <h5 class="title">{% trans 'Log in' %}</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card-footer text-center">
+                                <a href="{% url 'admin:index' %}" class="btn btn-lg btn-fill btn-primary">{% trans 'Log in again' %}</a>
                             </div>
                         </div>
                     </div>
@@ -22,6 +26,8 @@
             </div>
         </div>
     </div>
+
+    {% include "../admin/admin_black_setting.html" %}
 {% endblock %}
 
 {% block extrascript %}
