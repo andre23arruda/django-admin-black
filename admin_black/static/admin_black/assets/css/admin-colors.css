@@ -1,5 +1,25 @@
 a {
-    color: #9a2cff;
+    color: #7cc0ff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #669ed1;
+}
+
+.navbar .navbar-brand {
+    width: 250px;
+    white-space: normal;
+    margin: 0;
+}
+
+.fixed-plugin {
+    top: auto;
+    bottom: 50px;
+}
+
+span.form-check-sign {
+    background-color: #707cb0;
 }
 
 .btn {
@@ -35,7 +55,23 @@ a {
     background-image: none !important;
 }
 
-input[type="submit"].default{
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active:focus,
+.btn-primary.active:hover {
+    background-color: #0972dc !important;
+    background-image: none !important;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+input[type="submit"].default,
+input[type="button"].add-array-item
+{
     font-size: 0.875rem;
     border-radius: 0.2857rem;
     padding: 5px 15px;
@@ -73,6 +109,24 @@ input[type="submit"].default{
     max-height: 100%;
     position: relative;
 }
+
+.filter_card {
+    border: 1px solid #aeaeaec9;
+}
+
+.filter_card .filter_card_header {
+    background-color: #1d8cf8 !important;
+}
+
+.white-content .card:not(.card-white) .card-header h4 {
+    color: white;
+}
+
+.filter_card .filter_panel {
+    border-bottom: 1px solid #ccccccd1;
+    margin-bottom: 15px;
+}
+
 
 @media screen and (max-width: 991px) {
     .breadcrumbs_panel .lbc {
