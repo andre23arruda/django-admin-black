@@ -1,7 +1,5 @@
 {% extends "admin/base_site.html" %}
 {% load i18n %}
-{% load admin_black %}
-{% get_admin_black_setting as admin_black_setting %}
 
 {% block content %}
     <div class="row white-content" style="
@@ -12,7 +10,7 @@
         <div class="col-8 offset-2">
             <div class="card">
                 <div class="card-header {{ direction.panel }}">
-                    <h5 class="title">{% trans 'Log in' %}</h5>
+                    <h5 class="title">{% trans 'Log in' %} {% trans 'Administration Panel' %}</h5>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -27,7 +25,6 @@
         </div>
     </div>
 
-    {% include "../admin/admin_black_setting.html" %}
 {% endblock %}
 
 {% block extrascript %}
