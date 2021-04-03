@@ -15,13 +15,9 @@ Modern template for **Django admin interface** coded on top of Black Dashboard (
 
 ## Why Django Admin Black?
 
-- UI Kit: **Black Dashboard** (Free version) provided by **Creative-Tim**
-- New fresh look
-- Responsive mobile interface
-- Useful admin home page
-- Minimal template overriding
-- Support RTL and LTR template
-- Easy integration
+- It's amazing
+- Easy installation
+- Dark mode
 
 <br />
 
@@ -62,54 +58,6 @@ $ easy_install git+https://github.com/andre23arruda/django-admin-black.git
         icon = 'ICON_CLASS'  # for example: icon = 'tim-icons icon-atom'
 ```
 
-* Make sure ``django.template.context_processors.request`` context processor is enabled in settings.py (Django 1.8+ way):
-
-```python
-
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    ...
-                    'django.template.context_processors.request',
-                    ...
-                ],
-            },
-        },
-    ]
-```
-
-:warning: **Warning!!**
-* Before Django 1.8 you should specify context processors different way. Also use ``django.core.context_processors.request`` instead of ``django.template.context_processors.request``.
-
-```python
-    from django.conf import global_settings
-
-    TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
-        'django.core.context_processors.request',
-    )
-```
-
-* Create database tables:
-
-```bash
-$ python manage.py migrate admin_black
-$ # or
-$ python manage.py syncdb
-```
-
-* Collect static if you are in production environment:
-
-```bash
-$ python manage.py collectstatic
-```
-
-* Clear your browser cache
-
-<br />
 
 ## Screenshots
 
