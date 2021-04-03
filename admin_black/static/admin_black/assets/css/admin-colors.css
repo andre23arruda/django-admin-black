@@ -114,12 +114,22 @@ input[type="button"].add-array-item
     transition: none;
 }
 
+.sidebar .nav li>a {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.sidebar .nav li>a p {
+    white-space: normal;
+}
+
 .card .card-header h5.title {
     text-align: center !important;
 }
 
 .breadcrumbs_panel .lbc {
-    margin: 80px 32px -50px 30%;
+    margin: 80px 300px -50px;
     text-align: left;
 }
 
