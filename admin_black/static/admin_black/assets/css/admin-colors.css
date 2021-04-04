@@ -159,9 +159,23 @@ input[type="button"].add-array-item
     margin-bottom: 15px;
 }
 
-.related-widget-wrapper,
-.related-widget-wrapper ul,
 .vTextField, .vUUIDField {
+    width: 100% !important;
+}
+
+.vDateField {
+    margin-bottom: 5px;
+}
+
+.datetimeshortcuts {
+    float: right;
+}
+
+.selector-chosen h2 {
+    background: #393f86;
+}
+
+.width-100 {
     width: 100% !important;
 }
 
